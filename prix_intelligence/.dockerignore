@@ -1,0 +1,32 @@
+# Fichiers à exclure du Docker build
+
+# Jupyter
+notebooks/
+.ipynb_checkpoints/
+*.ipynb
+
+# Données brutes volumineuses
+data/raw/historique_prices.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environnements virtuels
+venv/
+env/
+.env
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+
+# Fichiers Windows
+Thumbs.db
+desktop.ini

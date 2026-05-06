@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data
+*.csv
+*.json
+
+# Secrets
+credentials.json
+
+# Env
+.env
+venv/
