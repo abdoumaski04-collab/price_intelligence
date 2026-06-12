@@ -11,7 +11,7 @@ La plateforme combine un pipeline de streaming en temps réel et de traitements 
 2. [⚙️ Ops & Infrastructure](#️-ops--infrastructure)__Hafsa Elladam
 3. [🛡️ Sécurité (DevSecOps)](#️-sécurité-devsecops) __abderrahmane Maski
 4. [📈 Analyses Statistiques & Machine Learning](#-analyses-statistiques--machine-learning) __adnane Biyoud
-5. [📊 Dashboards & Visualisation](#-dashboards--visualisation)__ acher ELHatimi
+5. [📊 Dashboards & Visualisation](#-fullstack--development)__ acher elhatimi
 6. [🚀 Démarrage Rapide](#-démarrage-rapide)
 
 ---
@@ -111,7 +111,7 @@ Entraînement d'un modèle **Random Forest Regressor** (200 estimateurs) après 
 
 ---
 
-## 📊 Dashboards & Visualisation
+## 📊 fullstack development
 
 ### 1. API Rest (FastAPI)
 L'API dans [main.py](file:///C:/Users/admin/Downloads/price_intelligence_FINAL/data_analy/api/main.py) fournit 21 endpoints structurés pour exposer :
