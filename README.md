@@ -11,7 +11,7 @@ La plateforme combine un pipeline de streaming en temps réel et de traitements 
 2. [⚙️ Ops & Infrastructure](#️-ops--infrastructure)__Hafsa Elladam
 3. [🛡️ Sécurité (DevSecOps)](#️-sécurité-devsecops) __abderrahmane Maski
 4. [📈 Analyses Statistiques & Machine Learning](#-analyses-statistiques--machine-learning) __adnane Biyoud
-5. [📊 Dashboards & Visualisation](#-fullstack--development)__ acher elhatimi
+5. [📊 fullstack development & Dashboards Visualisation](#-fullstack--development)__ acher elhatimi
 6. [🚀 Démarrage Rapide](#-démarrage-rapide)
 
 ---
