@@ -1,0 +1,3481 @@
+{
+  "meta": {
+    "date_analyse": "2026-06-12 12:06",
+    "version": "2.0",
+    "nb_produits": 2886,
+    "nb_categories": 5,
+    "sites": [
+      "ikea",
+      "jumia",
+      "kitea"
+    ],
+    "periode_historique": "30 jours",
+    "mode_donnees": "bigtable",
+    "source_production": "Google Cloud Bigtable → run_analysis.py"
+  },
+  "stats_par_site": {
+    "moyenne": {
+      "ikea": 4241.91,
+      "jumia": 1350.31,
+      "kitea": 3401.29
+    },
+    "mediane": {
+      "ikea": 2995.0,
+      "jumia": 899.0,
+      "kitea": 2350.0
+    },
+    "ecart_type": {
+      "ikea": 4033.69,
+      "jumia": 1225.45,
+      "kitea": 3402.17
+    },
+    "minimum": {
+      "ikea": 79.0,
+      "jumia": 27.99,
+      "kitea": 49.0
+    },
+    "maximum": {
+      "ikea": 24307.0,
+      "jumia": 5990.0,
+      "kitea": 18995.0
+    },
+    "count": {
+      "ikea": 295,
+      "jumia": 1294,
+      "kitea": 1297
+    }
+  },
+  "stats_par_categorie": {
+    "moyenne": {
+      "Chambre Adulte": 2275.77,
+      "Mobilier Pro": 2460.37,
+      "Rangement": 1867.67,
+      "Salle A Manger": 2095.49,
+      "Salon Et Sejour": 3831.19
+    },
+    "mediane": {
+      "Chambre Adulte": 1692.5,
+      "Mobilier Pro": 1699.0,
+      "Rangement": 1495.0,
+      "Salle A Manger": 1299.0,
+      "Salon Et Sejour": 2195.0
+    },
+    "ecart_type": {
+      "Chambre Adulte": 2183.79,
+      "Mobilier Pro": 2713.67,
+      "Rangement": 1308.46,
+      "Salle A Manger": 2415.14,
+      "Salon Et Sejour": 4335.72
+    },
+    "count": {
+      "Chambre Adulte": 768,
+      "Mobilier Pro": 433,
+      "Rangement": 265,
+      "Salle A Manger": 771,
+      "Salon Et Sejour": 649
+    }
+  },
+  "stats_site_categorie": {
+    "ikea": {
+      "Chambre Adulte": {
+        "moyenne": 3777.86,
+        "mediane": 2995.0,
+        "ecart_type": 3022.93,
+        "count": 91
+      },
+      "Mobilier Pro": {
+        "moyenne": 2137.88,
+        "mediane": 1748.0,
+        "ecart_type": 1500.33,
+        "count": 43
+      },
+      "Rangement": {
+        "moyenne": 1771.93,
+        "mediane": 1699.0,
+        "ecart_type": 1511.82,
+        "count": 27
+      },
+      "Salle A Manger": {
+        "moyenne": 5944.33,
+        "mediane": 4746.5,
+        "ecart_type": 5198.81,
+        "count": 58
+      },
+      "Salon Et Sejour": {
+        "moyenne": 5566.25,
+        "mediane": 3999.0,
+        "ecart_type": 4605.1,
+        "count": 76
+      }
+    },
+    "jumia": {
+      "Chambre Adulte": {
+        "moyenne": 1410.08,
+        "mediane": 799.5,
+        "ecart_type": 1298.73,
+        "count": 454
+      },
+      "Mobilier Pro": {
+        "moyenne": 1136.4,
+        "mediane": 829.0,
+        "ecart_type": 960.25,
+        "count": 181
+      },
+      "Salle A Manger": {
+        "moyenne": 1202.31,
+        "mediane": 895.0,
+        "ecart_type": 1025.04,
+        "count": 457
+      },
+      "Salon Et Sejour": {
+        "moyenne": 1742.48,
+        "mediane": 1397.0,
+        "ecart_type": 1547.87,
+        "count": 202
+      }
+    },
+    "kitea": {
+      "Chambre Adulte": {
+        "moyenne": 3425.24,
+        "mediane": 2990.0,
+        "ecart_type": 2354.86,
+        "count": 223
+      },
+      "Mobilier Pro": {
+        "moyenne": 3673.32,
+        "mediane": 2399.0,
+        "ecart_type": 3319.16,
+        "count": 209
+      },
+      "Rangement": {
+        "moyenne": 1878.53,
+        "mediane": 1495.0,
+        "ecart_type": 1286.55,
+        "count": 238
+      },
+      "Salle A Manger": {
+        "moyenne": 2817.96,
+        "mediane": 2595.0,
+        "ecart_type": 2090.36,
+        "count": 256
+      },
+      "Salon Et Sejour": {
+        "moyenne": 4613.01,
+        "mediane": 2495.0,
+        "ecart_type": 4869.22,
+        "count": 371
+      }
+    }
+  },
+  "promotions": {
+    "nb_produits": {
+      "ikea": 295,
+      "jumia": 1294,
+      "kitea": 1297
+    },
+    "nb_promos": {
+      "ikea": 0,
+      "jumia": 898,
+      "kitea": 562
+    },
+    "taux_promo": {
+      "ikea": 0.0,
+      "jumia": 69.0,
+      "kitea": 43.0
+    },
+    "remise_moy": {
+      "ikea": 0.0,
+      "jumia": 21.51,
+      "kitea": 13.43
+    },
+    "remise_max": {
+      "ikea": 0.0,
+      "jumia": 76.0,
+      "kitea": 78.6
+    }
+  },
+  "intervalles_confiance": {
+    "ikea": {
+      "n": 295,
+      "moyenne": 4241.91,
+      "ic_low": 3779.7,
+      "ic_high": 4704.11,
+      "marge": 462.2,
+      "cv_pct": 95.1,
+      "sem": 234.85
+    },
+    "jumia": {
+      "n": 1294,
+      "moyenne": 1350.31,
+      "ic_low": 1283.48,
+      "ic_high": 1417.14,
+      "marge": 66.83,
+      "cv_pct": 90.8,
+      "sem": 34.07
+    },
+    "kitea": {
+      "n": 1297,
+      "moyenne": 3401.29,
+      "ic_low": 3215.96,
+      "ic_high": 3586.61,
+      "marge": 185.33,
+      "cv_pct": 100.0,
+      "sem": 94.47
+    }
+  },
+  "ic_categories": {
+    "Salon Et Sejour": {
+      "n": 649,
+      "moyenne": 3831.19,
+      "ic_low": 3497.0,
+      "ic_high": 4165.38
+    },
+    "Chambre Adulte": {
+      "n": 768,
+      "moyenne": 2275.77,
+      "ic_low": 2121.08,
+      "ic_high": 2430.46
+    },
+    "Salle A Manger": {
+      "n": 771,
+      "moyenne": 2095.49,
+      "ic_low": 1924.75,
+      "ic_high": 2266.23
+    },
+    "Mobilier Pro": {
+      "n": 433,
+      "moyenne": 2460.37,
+      "ic_low": 2204.05,
+      "ic_high": 2716.69
+    },
+    "Rangement": {
+      "n": 265,
+      "moyenne": 1867.67,
+      "ic_low": 1709.41,
+      "ic_high": 2025.94
+    }
+  },
+  "shapiro": {
+    "ikea": {
+      "stat": 0.8184,
+      "p_value": 0.0,
+      "normal": false,
+      "n": 295
+    },
+    "jumia": {
+      "stat": 0.8547,
+      "p_value": 0.0,
+      "normal": false,
+      "n": 1294
+    },
+    "kitea": {
+      "stat": 0.7397,
+      "p_value": 0.0,
+      "normal": false,
+      "n": 1297
+    }
+  },
+  "kruskal_categories": {
+    "stat": 89.69,
+    "p_value": 0.0,
+    "significatif": true
+  },
+  "kruskal_sites": {
+    "stat": 585.84,
+    "p_value": 0.0,
+    "significatif": true
+  },
+  "mann_whitney": {
+    "Salon Et Sejour": {
+      "ikea_vs_jumia": {
+        "stat": 12475.5,
+        "p_value": 0.0,
+        "significatif": true
+      },
+      "ikea_vs_kitea": {
+        "stat": 17085.5,
+        "p_value": 0.003592,
+        "significatif": true
+      },
+      "jumia_vs_kitea": {
+        "stat": 21188.5,
+        "p_value": 0.0,
+        "significatif": true
+      }
+    },
+    "Chambre Adulte": {
+      "ikea_vs_jumia": {
+        "stat": 32218.0,
+        "p_value": 0.0,
+        "significatif": true
+      },
+      "ikea_vs_kitea": {
+        "stat": 10511.0,
+        "p_value": 0.617947,
+        "significatif": false
+      },
+      "jumia_vs_kitea": {
+        "stat": 20951.5,
+        "p_value": 0.0,
+        "significatif": true
+      }
+    },
+    "Salle A Manger": {
+      "ikea_vs_jumia": {
+        "stat": 22699.5,
+        "p_value": 0.0,
+        "significatif": true
+      },
+      "ikea_vs_kitea": {
+        "stat": 10205.5,
+        "p_value": 8e-06,
+        "significatif": true
+      },
+      "jumia_vs_kitea": {
+        "stat": 28065.0,
+        "p_value": 0.0,
+        "significatif": true
+      }
+    },
+    "Mobilier Pro": {
+      "ikea_vs_jumia": {
+        "stat": 5558.5,
+        "p_value": 1.3e-05,
+        "significatif": true
+      },
+      "ikea_vs_kitea": {
+        "stat": 3208.5,
+        "p_value": 0.003162,
+        "significatif": true
+      },
+      "jumia_vs_kitea": {
+        "stat": 6751.5,
+        "p_value": 0.0,
+        "significatif": true
+      }
+    },
+    "Rangement": {
+      "ikea_vs_kitea": {
+        "stat": 2998.0,
+        "p_value": 0.569613,
+        "significatif": false
+      }
+    }
+  },
+  "regression": {
+    "r2": 0.2111,
+    "r2_adj": 0.2092,
+    "f_stat": 110.01,
+    "p_global": 0.0,
+    "coefficients": {
+      "Intercept": 4194.24,
+      "C(site)[T.jumia]": -2399.32,
+      "C(site)[T.kitea]": -358.53,
+      "C(categorie)[T.Mobilier Pro]": -246.69,
+      "C(categorie)[T.Rangement]": -1799.4,
+      "C(categorie)[T.Salle A Manger]": -58.82,
+      "C(categorie)[T.Salon Et Sejour]": 1008.76,
+      "en_promo_num": -787.93
+    },
+    "p_values": {
+      "Intercept": 0.0,
+      "C(site)[T.jumia]": 0.0,
+      "C(site)[T.kitea]": 0.0443,
+      "C(categorie)[T.Mobilier Pro]": 0.1233,
+      "C(categorie)[T.Rangement]": 0.0,
+      "C(categorie)[T.Salle A Manger]": 0.6635,
+      "C(categorie)[T.Salon Et Sejour]": 0.0,
+      "en_promo_num": 0.0
+    }
+  },
+  "power_analysis": {
+    "ikea_vs_jumia": {
+      "cohens_d": 0.97,
+      "interpretation": "Très grand effet",
+      "puissance": 1.0,
+      "n_actuel": 295,
+      "n_minimum": 17,
+      "taille_effet": "Très grand effet"
+    },
+    "ikea_vs_kitea": {
+      "cohens_d": 0.2253,
+      "interpretation": "Effet moyen",
+      "puissance": 0.78,
+      "n_actuel": 295,
+      "n_minimum": 310,
+      "taille_effet": "Effet moyen"
+    },
+    "jumia_vs_kitea": {
+      "cohens_d": 0.8021,
+      "interpretation": "Très grand effet",
+      "puissance": 1.0,
+      "n_actuel": 1294,
+      "n_minimum": 25,
+      "taille_effet": "Très grand effet"
+    }
+  },
+  "correlation": {
+    "spearman_matrix": {
+      "Prix": {
+        "Prix": 1.0,
+        "Ancien Prix": 0.977,
+        "Remise %": -0.23,
+        "En Promo": NaN,
+        "Gamme": 0.957
+      },
+      "Ancien Prix": {
+        "Prix": 0.977,
+        "Ancien Prix": 1.0,
+        "Remise %": -0.047,
+        "En Promo": NaN,
+        "Gamme": 0.94
+      },
+      "Remise %": {
+        "Prix": -0.23,
+        "Ancien Prix": -0.047,
+        "Remise %": 1.0,
+        "En Promo": NaN,
+        "Gamme": -0.198
+      },
+      "En Promo": {
+        "Prix": NaN,
+        "Ancien Prix": NaN,
+        "Remise %": NaN,
+        "En Promo": NaN,
+        "Gamme": NaN
+      },
+      "Gamme": {
+        "Prix": 0.957,
+        "Ancien Prix": 0.94,
+        "Remise %": -0.198,
+        "En Promo": NaN,
+        "Gamme": 1.0
+      }
+    }
+  },
+  "velocity": {
+    "ikea": {
+      "slope": -107.4724,
+      "pente_jour": -107.4724,
+      "variation_30j": -3116.7,
+      "variation_pct": -3116.7,
+      "tendance": "BAISSE",
+      "r2": 0.1134,
+      "p_value": 0.020635
+    },
+    "jumia": {
+      "slope": -2.5419,
+      "pente_jour": -2.5419,
+      "variation_30j": -73.71,
+      "variation_pct": -73.71,
+      "tendance": "BAISSE",
+      "r2": 0.0423,
+      "p_value": 0.035272
+    },
+    "kitea": {
+      "slope": -0.1573,
+      "pente_jour": -0.1573,
+      "variation_30j": -4.56,
+      "variation_pct": -4.56,
+      "tendance": "STABLE",
+      "r2": 0.0,
+      "p_value": 0.970523
+    }
+  },
+  "evolution_prix": [
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:34",
+      "prix": 8514.17
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:35",
+      "prix": 10349.0
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:37",
+      "prix": 16538.48
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:40",
+      "prix": 22519.96
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:43",
+      "prix": 8242.14
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:45",
+      "prix": 6002.96
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:48",
+      "prix": 3282.77
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:50",
+      "prix": 8612.5
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:53",
+      "prix": 3862.86
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:56",
+      "prix": 3966.5
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:50:58",
+      "prix": 5039.44
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:00",
+      "prix": 6062.11
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:02",
+      "prix": 4084.44
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:04",
+      "prix": 2741.67
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:07",
+      "prix": 661.33
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:09",
+      "prix": 2296.68
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:12",
+      "prix": 8477.29
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:54",
+      "prix": 3879.41
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:51:57",
+      "prix": 11097.73
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:00",
+      "prix": 2012.54
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:02",
+      "prix": 5366.15
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:05",
+      "prix": 3842.33
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:06",
+      "prix": 7918.18
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:09",
+      "prix": 2925.11
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:11",
+      "prix": 4515.22
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:13",
+      "prix": 9094.09
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:16",
+      "prix": 2933.5
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:19",
+      "prix": 3731.17
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:22",
+      "prix": 4811.82
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:24",
+      "prix": 7650.83
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:27",
+      "prix": 2705.04
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:30",
+      "prix": 1919.96
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:32",
+      "prix": 1683.67
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:52:35",
+      "prix": 3928.35
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:20",
+      "prix": 2093.17
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:23",
+      "prix": 1152.61
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:26",
+      "prix": 6950.0
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:28",
+      "prix": 7575.71
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:30",
+      "prix": 1143.41
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:32",
+      "prix": 1516.47
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:35",
+      "prix": 2068.09
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:37",
+      "prix": 1636.33
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:40",
+      "prix": 3351.71
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:43",
+      "prix": 1631.7
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:45",
+      "prix": 4813.88
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:46",
+      "prix": 7840.07
+    },
+    {
+      "site": "ikea",
+      "date_scraping": "2026-06-11 18:53:49",
+      "prix": 15739.38
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:39",
+      "prix": 1006.13
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:40",
+      "prix": 1102.86
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:42",
+      "prix": 874.6
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:43",
+      "prix": 1562.16
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:44",
+      "prix": 1555.6
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:45",
+      "prix": 2067.01
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:46",
+      "prix": 916.09
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:48",
+      "prix": 1516.51
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:50",
+      "prix": 890.14
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:51",
+      "prix": 1160.71
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:53",
+      "prix": 1507.6
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:54",
+      "prix": 1708.06
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:56",
+      "prix": 892.32
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:58",
+      "prix": 1492.75
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:50:59",
+      "prix": 1369.69
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:01",
+      "prix": 1206.96
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:06",
+      "prix": 1229.94
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:07",
+      "prix": 2324.77
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:08",
+      "prix": 723.71
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:10",
+      "prix": 1246.55
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:11",
+      "prix": 1484.36
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:13",
+      "prix": 1588.0
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:14",
+      "prix": 1176.33
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:15",
+      "prix": 1941.36
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:16",
+      "prix": 507.47
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:18",
+      "prix": 1185.68
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:20",
+      "prix": 825.06
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:22",
+      "prix": 1542.0
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:24",
+      "prix": 905.76
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:27",
+      "prix": 1114.42
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:28",
+      "prix": 568.04
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:30",
+      "prix": 1567.58
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:31",
+      "prix": 344.53
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:35",
+      "prix": 976.5
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:37",
+      "prix": 1514.3
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:39",
+      "prix": 1609.51
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:41",
+      "prix": 1511.15
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:43",
+      "prix": 1840.89
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:45",
+      "prix": 630.21
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:46",
+      "prix": 1316.72
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:47",
+      "prix": 2212.17
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:48",
+      "prix": 1059.24
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:49",
+      "prix": 967.95
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:50",
+      "prix": 829.64
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:52",
+      "prix": 1749.11
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:56",
+      "prix": 1006.77
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:57",
+      "prix": 591.58
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:51:59",
+      "prix": 832.94
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:00",
+      "prix": 1513.95
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:02",
+      "prix": 1328.73
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:05",
+      "prix": 880.78
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:07",
+      "prix": 991.11
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:08",
+      "prix": 1495.69
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:09",
+      "prix": 952.98
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:11",
+      "prix": 1172.71
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:14",
+      "prix": 1626.16
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:16",
+      "prix": 1133.86
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:17",
+      "prix": 604.86
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:19",
+      "prix": 1616.79
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:20",
+      "prix": 1093.97
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:21",
+      "prix": 553.28
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:23",
+      "prix": 985.34
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:25",
+      "prix": 1030.99
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:28",
+      "prix": 1195.75
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:29",
+      "prix": 1046.03
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:31",
+      "prix": 991.75
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:33",
+      "prix": 1160.7
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:34",
+      "prix": 976.03
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:35",
+      "prix": 1270.16
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:37",
+      "prix": 641.32
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:38",
+      "prix": 931.92
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:41",
+      "prix": 1277.1
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:42",
+      "prix": 1310.02
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:44",
+      "prix": 986.97
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:45",
+      "prix": 1053.64
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:47",
+      "prix": 1117.34
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:48",
+      "prix": 1073.65
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:50",
+      "prix": 1339.92
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:52",
+      "prix": 1308.8
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:54",
+      "prix": 1293.66
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:55",
+      "prix": 1402.6
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:56",
+      "prix": 1101.56
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:58",
+      "prix": 1220.63
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:52:59",
+      "prix": 975.54
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:00",
+      "prix": 1220.12
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:01",
+      "prix": 1174.34
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:03",
+      "prix": 1323.74
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:05",
+      "prix": 950.13
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:06",
+      "prix": 1171.59
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:08",
+      "prix": 1072.05
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:09",
+      "prix": 1208.74
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:11",
+      "prix": 976.26
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:12",
+      "prix": 1066.19
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:14",
+      "prix": 984.24
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:15",
+      "prix": 1128.19
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:17",
+      "prix": 1234.86
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:19",
+      "prix": 841.9
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:20",
+      "prix": 1621.08
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:21",
+      "prix": 1236.46
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:23",
+      "prix": 1316.41
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:24",
+      "prix": 1368.58
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:25",
+      "prix": 1442.07
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:27",
+      "prix": 1293.06
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:29",
+      "prix": 163.99
+    },
+    {
+      "site": "jumia",
+      "date_scraping": "2026-06-11 18:53:32",
+      "prix": 158.34
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:03",
+      "prix": 2058.1
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:11",
+      "prix": 3288.75
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:13",
+      "prix": 4651.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:15",
+      "prix": 1450.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:17",
+      "prix": 3287.88
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:19",
+      "prix": 6008.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:21",
+      "prix": 3703.95
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:24",
+      "prix": 3195.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:26",
+      "prix": 2456.61
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:28",
+      "prix": 9311.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:30",
+      "prix": 2942.6
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:31",
+      "prix": 2227.78
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:34",
+      "prix": 2694.44
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:37",
+      "prix": 2992.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:39",
+      "prix": 4279.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:41",
+      "prix": 3032.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:43",
+      "prix": 2595.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:45",
+      "prix": 3031.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:47",
+      "prix": 2393.85
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:50",
+      "prix": 4091.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:53",
+      "prix": 2526.35
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:56",
+      "prix": 3493.64
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:43:58",
+      "prix": 3561.81
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:01",
+      "prix": 2024.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:03",
+      "prix": 7023.57
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:04",
+      "prix": 2245.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:06",
+      "prix": 2122.45
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:13",
+      "prix": 2688.53
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:17",
+      "prix": 2690.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:18",
+      "prix": 2625.42
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:22",
+      "prix": 2273.1
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:27",
+      "prix": 7047.88
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:32",
+      "prix": 2931.3
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:35",
+      "prix": 2481.67
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:36",
+      "prix": 4315.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:40",
+      "prix": 3591.36
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:44",
+      "prix": 1173.85
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:49",
+      "prix": 11130.29
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:53",
+      "prix": 2654.22
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:44:57",
+      "prix": 3834.6
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:00",
+      "prix": 3402.5
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:01",
+      "prix": 6072.5
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:05",
+      "prix": 1936.45
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:10",
+      "prix": 4541.41
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:18",
+      "prix": 2750.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:22",
+      "prix": 2223.56
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:27",
+      "prix": 2271.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:32",
+      "prix": 8313.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:36",
+      "prix": 2472.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:41",
+      "prix": 3982.35
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:44",
+      "prix": 2290.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:49",
+      "prix": 4842.36
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:53",
+      "prix": 2335.43
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:45:56",
+      "prix": 2990.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:04",
+      "prix": 6008.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:17",
+      "prix": 5048.88
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:22",
+      "prix": 2162.19
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:27",
+      "prix": 2359.27
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:32",
+      "prix": 2578.56
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:37",
+      "prix": 4270.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:41",
+      "prix": 2893.06
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:46",
+      "prix": 3194.58
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:50",
+      "prix": 1781.67
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:51",
+      "prix": 3938.2
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:46:56",
+      "prix": 1506.2
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 17:47:00",
+      "prix": 1295.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:32",
+      "prix": 3070.75
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:37",
+      "prix": 7217.18
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:38",
+      "prix": 10776.78
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:41",
+      "prix": 3089.16
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:46",
+      "prix": 1450.53
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:49",
+      "prix": 10581.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:52",
+      "prix": 7187.21
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:55",
+      "prix": 2554.9
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:54:58",
+      "prix": 3281.05
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:01",
+      "prix": 1789.16
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:04",
+      "prix": 11645.71
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:07",
+      "prix": 5263.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:10",
+      "prix": 2240.3
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:13",
+      "prix": 4877.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:16",
+      "prix": 2058.1
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:19",
+      "prix": 2087.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:22",
+      "prix": 3339.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:25",
+      "prix": 3288.75
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:28",
+      "prix": 4651.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:31",
+      "prix": 1441.74
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:35",
+      "prix": 3287.88
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:38",
+      "prix": 6008.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:42",
+      "prix": 3703.95
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:45",
+      "prix": 3195.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:49",
+      "prix": 2456.61
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:52",
+      "prix": 9311.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:56",
+      "prix": 2942.6
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:55:59",
+      "prix": 2227.78
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:02",
+      "prix": 2694.44
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:06",
+      "prix": 2992.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:09",
+      "prix": 4279.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:12",
+      "prix": 2583.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:13",
+      "prix": 4379.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:16",
+      "prix": 2595.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:21",
+      "prix": 3031.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:24",
+      "prix": 2393.85
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:27",
+      "prix": 4091.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:31",
+      "prix": 2526.35
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:35",
+      "prix": 3493.64
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:38",
+      "prix": 3561.81
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:41",
+      "prix": 2024.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:45",
+      "prix": 6426.25
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:48",
+      "prix": 2122.45
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:52",
+      "prix": 2688.53
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:55",
+      "prix": 2638.33
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:56:58",
+      "prix": 2273.1
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:02",
+      "prix": 7047.88
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:06",
+      "prix": 2931.3
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:09",
+      "prix": 3593.75
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:10",
+      "prix": 2776.56
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:13",
+      "prix": 3591.36
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:16",
+      "prix": 1173.85
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:19",
+      "prix": 11130.29
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:23",
+      "prix": 2654.22
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:26",
+      "prix": 3834.6
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:29",
+      "prix": 3699.17
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:33",
+      "prix": 1936.45
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:36",
+      "prix": 4541.41
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:43",
+      "prix": 2750.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:46",
+      "prix": 2223.56
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:50",
+      "prix": 2271.4
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:53",
+      "prix": 8313.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:56",
+      "prix": 2472.32
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:57:59",
+      "prix": 3982.35
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:02",
+      "prix": 2290.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:06",
+      "prix": 4842.36
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:09",
+      "prix": 2335.43
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:11",
+      "prix": 2990.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:19",
+      "prix": 6008.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:28",
+      "prix": 9105.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:29",
+      "prix": 3205.18
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:32",
+      "prix": 2162.19
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:36",
+      "prix": 2359.27
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:40",
+      "prix": 2578.56
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:44",
+      "prix": 4270.0
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:48",
+      "prix": 2893.06
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:51",
+      "prix": 3194.58
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:55",
+      "prix": 3129.5
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:58:59",
+      "prix": 1506.2
+    },
+    {
+      "site": "kitea",
+      "date_scraping": "2026-06-11 18:59:02",
+      "prix": 1295.0
+    }
+  ],
+  "anomalies": [],
+  "alertes": [
+    {
+      "nom": "MALM",
+      "site": "ikea",
+      "categorie": "ensemble-meuble-chambre-54992",
+      "prix_actuel": 8692.0,
+      "prix_moyen": 3432.5,
+      "variation_pct": 153.23,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 153.2%",
+      "date": "2026-06-11 18:53:28"
+    },
+    {
+      "nom": "TONSTAD",
+      "site": "ikea",
+      "categorie": "ensemble-meuble-chambre-54992",
+      "prix_actuel": 15785.0,
+      "prix_moyen": 6950.38,
+      "variation_pct": 127.11,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 127.1%",
+      "date": "2026-06-11 18:53:28"
+    },
+    {
+      "nom": "GURSKEN",
+      "site": "ikea",
+      "categorie": "ensemble-meuble-chambre-54992",
+      "prix_actuel": 5199.0,
+      "prix_moyen": 2399.67,
+      "variation_pct": 116.66,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 116.7%",
+      "date": "2026-06-11 18:53:28"
+    },
+    {
+      "nom": "OMAR",
+      "site": "ikea",
+      "categorie": "systemes-de-rangement-10397",
+      "prix_actuel": 4058.0,
+      "prix_moyen": 1900.12,
+      "variation_pct": 113.56,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 113.6%",
+      "date": "2026-06-11 18:53:37"
+    },
+    {
+      "nom": "Garder le vent et les poussières hors maison bloqu",
+      "site": "jumia",
+      "categorie": "meubles-meubles-chambre-coucher",
+      "prix_actuel": 129.5,
+      "prix_moyen": 63.12,
+      "variation_pct": 105.15,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 105.1%",
+      "date": "2026-06-11 18:52:17"
+    },
+    {
+      "nom": "Table d’Appoint Moderne en Forme de C – Petite Tab",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 431.65,
+      "prix_moyen": 216.32,
+      "variation_pct": 99.54,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 99.5%",
+      "date": "2026-06-11 18:53:14"
+    },
+    {
+      "nom": "BRÄNNBOLL",
+      "site": "ikea",
+      "categorie": "bureaux-pour-la-maison-20651",
+      "prix_actuel": 3295.0,
+      "prix_moyen": 1729.67,
+      "variation_pct": 90.5,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 90.5%",
+      "date": "2026-06-11 18:52:32"
+    },
+    {
+      "nom": "LANDSKRONA",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1699.0,
+      "prix_moyen": 16824.12,
+      "variation_pct": -89.9,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 89.9%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "EKET",
+      "site": "ikea",
+      "categorie": "rangements-cubiques-55012",
+      "prix_actuel": 1613.0,
+      "prix_moyen": 850.55,
+      "variation_pct": 89.64,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 89.6%",
+      "date": "2026-06-11 18:53:30"
+    },
+    {
+      "nom": "LILLESÄTER",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 11159.0,
+      "variation_pct": -88.36,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 88.4%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "HEJNE",
+      "site": "ikea",
+      "categorie": "systemes-de-rangement-10397",
+      "prix_actuel": 110.0,
+      "prix_moyen": 900.0,
+      "variation_pct": -87.78,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 87.8%",
+      "date": "2026-06-11 18:53:37"
+    },
+    {
+      "nom": "KIVIK",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 2499.0,
+      "prix_moyen": 14976.94,
+      "variation_pct": -83.31,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 83.3%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "BILLY / OXBERG",
+      "site": "ikea",
+      "categorie": "bibliotheques-10382",
+      "prix_actuel": 4348.0,
+      "prix_moyen": 2411.38,
+      "variation_pct": 80.31,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 80.3%",
+      "date": "2026-06-11 18:53:35"
+    },
+    {
+      "nom": "EKTORP",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 6082.17,
+      "variation_pct": -78.64,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 78.6%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "SKOGSTA",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-4-pers-36212",
+      "prix_actuel": 9995.0,
+      "prix_moyen": 5622.5,
+      "variation_pct": 77.77,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 77.8%",
+      "date": "2026-06-11 18:53:46"
+    },
+    {
+      "nom": "SANDSBERG",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-2-pers-36209",
+      "prix_actuel": 1099.0,
+      "prix_moyen": 618.25,
+      "variation_pct": 77.76,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 77.8%",
+      "date": "2026-06-11 18:53:45"
+    },
+    {
+      "nom": "VIMLE",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 3099.0,
+      "prix_moyen": 13188.91,
+      "variation_pct": -76.5,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 76.5%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "STOCKHOLM 2025",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1999.0,
+      "prix_moyen": 8436.62,
+      "variation_pct": -76.31,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 76.3%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "GLOSTAD",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 500.0,
+      "prix_moyen": 2099.2,
+      "variation_pct": -76.18,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 76.2%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "LACK",
+      "site": "ikea",
+      "categorie": "meuble-etagere-11465",
+      "prix_actuel": 999.0,
+      "prix_moyen": 567.33,
+      "variation_pct": 76.09,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 76.1%",
+      "date": "2026-06-11 18:53:32"
+    },
+    {
+      "nom": "RÅDMANSÖ",
+      "site": "ikea",
+      "categorie": "ensemble-meuble-chambre-54992",
+      "prix_actuel": 5993.0,
+      "prix_moyen": 3412.67,
+      "variation_pct": 75.61,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 75.6%",
+      "date": "2026-06-11 18:53:28"
+    },
+    {
+      "nom": "JONAXEL",
+      "site": "ikea",
+      "categorie": "meuble-etagere-11465",
+      "prix_actuel": 450.0,
+      "prix_moyen": 1729.88,
+      "variation_pct": -73.99,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 74.0%",
+      "date": "2026-06-11 18:53:32"
+    },
+    {
+      "nom": "LILLEHEM",
+      "site": "ikea",
+      "categorie": "elements-modulables-canape-31786",
+      "prix_actuel": 2279.0,
+      "prix_moyen": 7893.0,
+      "variation_pct": -71.13,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 71.1%",
+      "date": "2026-06-11 18:50:43"
+    },
+    {
+      "nom": "NORDKISA",
+      "site": "ikea",
+      "categorie": "armoires-ouvertes-43634",
+      "prix_actuel": 5295.0,
+      "prix_moyen": 3120.0,
+      "variation_pct": 69.71,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 69.7%",
+      "date": "2026-06-11 18:52:09"
+    },
+    {
+      "nom": "AULI",
+      "site": "ikea",
+      "categorie": "pax-portes-coulissantes-19115",
+      "prix_actuel": 5700.0,
+      "prix_moyen": 3400.0,
+      "variation_pct": 67.65,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 67.6%",
+      "date": "2026-06-11 18:51:54"
+    },
+    {
+      "nom": "Isolant Bas de Porte et fenêtre Double Isolation -",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 27.99,
+      "prix_moyen": 83.13,
+      "variation_pct": -66.33,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 66.3%",
+      "date": "2026-06-11 18:52:52"
+    },
+    {
+      "nom": "GRÅFJÄLLET",
+      "site": "ikea",
+      "categorie": "coiffeuses-20657",
+      "prix_actuel": 1295.0,
+      "prix_moyen": 779.67,
+      "variation_pct": 66.1,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 66.1%",
+      "date": "2026-06-11 18:52:00"
+    },
+    {
+      "nom": "GULLABERG",
+      "site": "ikea",
+      "categorie": "etageres-et-armoires-a-chaussures-10456",
+      "prix_actuel": 2299.0,
+      "prix_moyen": 6780.71,
+      "variation_pct": -66.1,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 66.1%",
+      "date": "2026-06-11 18:53:40"
+    },
+    {
+      "nom": "Armoire de Rangement Modulaire à 10 Cubes - Garde-",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 839.2,
+      "prix_moyen": 508.55,
+      "variation_pct": 65.02,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 65.0%",
+      "date": "2026-06-11 18:53:25"
+    },
+    {
+      "nom": "Plateau en bambou, plateau de service multifonctio",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 146.63,
+      "prix_moyen": 413.14,
+      "variation_pct": -64.51,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 64.5%",
+      "date": "2026-06-11 18:53:08"
+    },
+    {
+      "nom": "BJÖRNÖYA",
+      "site": "ikea",
+      "categorie": "pax-portes-coulissantes-19115",
+      "prix_actuel": 1250.0,
+      "prix_moyen": 3475.0,
+      "variation_pct": -64.03,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 64.0%",
+      "date": "2026-06-11 18:51:54"
+    },
+    {
+      "nom": "SALTSJÖBADEN",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 2199.0,
+      "prix_moyen": 5869.0,
+      "variation_pct": -62.53,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 62.5%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "RUNMARÖ",
+      "site": "ikea",
+      "categorie": "systemes-de-rangement-10397",
+      "prix_actuel": 499.0,
+      "prix_moyen": 1299.0,
+      "variation_pct": -61.59,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 61.6%",
+      "date": "2026-06-11 18:53:37"
+    },
+    {
+      "nom": "HEMNES",
+      "site": "ikea",
+      "categorie": "etageres-et-armoires-a-chaussures-10456",
+      "prix_actuel": 1995.0,
+      "prix_moyen": 5144.8,
+      "variation_pct": -61.22,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 61.2%",
+      "date": "2026-06-11 18:53:40"
+    },
+    {
+      "nom": "OSKARSHAMN",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 3298.67,
+      "variation_pct": -60.62,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 60.6%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "KULLEN",
+      "site": "ikea",
+      "categorie": "commodes-10451",
+      "prix_actuel": 1399.0,
+      "prix_moyen": 874.0,
+      "variation_pct": 60.07,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 60.1%",
+      "date": "2026-06-11 18:51:09"
+    },
+    {
+      "nom": "SLÄKT",
+      "site": "ikea",
+      "categorie": "matelas-bm002",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 3223.75,
+      "variation_pct": -59.71,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 59.7%",
+      "date": "2026-06-11 18:51:04"
+    },
+    {
+      "nom": "MICKE",
+      "site": "ikea",
+      "categorie": "bureaux-pour-la-maison-20651",
+      "prix_actuel": 2495.0,
+      "prix_moyen": 1564.33,
+      "variation_pct": 59.49,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 59.5%",
+      "date": "2026-06-11 18:52:32"
+    },
+    {
+      "nom": "Canapé Lit - GENE - Gonflable - Imperméable - Conf",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 1243.2,
+      "prix_moyen": 787.64,
+      "variation_pct": 57.84,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 57.8%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "STRANDMON",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 3024.0,
+      "variation_pct": -57.04,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 57.0%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "BESTÅ",
+      "site": "ikea",
+      "categorie": "banc-tv-10810",
+      "prix_actuel": 2840.0,
+      "prix_moyen": 6490.0,
+      "variation_pct": -56.24,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 56.2%",
+      "date": "2026-06-11 18:52:27"
+    },
+    {
+      "nom": "UPPÅKRA",
+      "site": "ikea",
+      "categorie": "repose-pieds-et-poufs-en-tissu-20927",
+      "prix_actuel": 4299.0,
+      "prix_moyen": 9533.17,
+      "variation_pct": -54.9,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 54.9%",
+      "date": "2026-06-11 18:53:43"
+    },
+    {
+      "nom": "MITTZON",
+      "site": "ikea",
+      "categorie": "bureaux-professionnels-47069",
+      "prix_actuel": 5899.0,
+      "prix_moyen": 3811.5,
+      "variation_pct": 54.77,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 54.8%",
+      "date": "2026-06-11 18:52:35"
+    },
+    {
+      "nom": "HYLLIS",
+      "site": "ikea",
+      "categorie": "systemes-de-rangement-10397",
+      "prix_actuel": 699.0,
+      "prix_moyen": 452.33,
+      "variation_pct": 54.53,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 54.5%",
+      "date": "2026-06-11 18:53:37"
+    },
+    {
+      "nom": "BRIMNES",
+      "site": "ikea",
+      "categorie": "bibliotheques-10382",
+      "prix_actuel": 1599.0,
+      "prix_moyen": 3486.35,
+      "variation_pct": -54.14,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 54.1%",
+      "date": "2026-06-11 18:53:35"
+    },
+    {
+      "nom": "SÖDERHAMN",
+      "site": "ikea",
+      "categorie": "meridiennes-57527",
+      "prix_actuel": 5300.0,
+      "prix_moyen": 11164.0,
+      "variation_pct": -52.53,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 52.5%",
+      "date": "2026-06-11 18:50:50"
+    },
+    {
+      "nom": "BOASTAD",
+      "site": "ikea",
+      "categorie": "banc-tv-10810",
+      "prix_actuel": 3499.0,
+      "prix_moyen": 7265.33,
+      "variation_pct": -51.84,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 51.8%",
+      "date": "2026-06-11 18:52:27"
+    },
+    {
+      "nom": "TROTTEN",
+      "site": "ikea",
+      "categorie": "bureaux-professionnels-47069",
+      "prix_actuel": 3499.0,
+      "prix_moyen": 2324.0,
+      "variation_pct": 50.56,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 50.6%",
+      "date": "2026-06-11 18:52:35"
+    },
+    {
+      "nom": "VISTHUS",
+      "site": "ikea",
+      "categorie": "armoires-a-portes-battantes-48005",
+      "prix_actuel": 5495.0,
+      "prix_moyen": 3661.67,
+      "variation_pct": 50.07,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 50.1%",
+      "date": "2026-06-11 18:52:05"
+    },
+    {
+      "nom": "Moyen Armoire Penderie pliable à 3 portes 8 étagèr",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 412.2,
+      "prix_moyen": 274.8,
+      "variation_pct": 50.0,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 50.0%",
+      "date": "2026-06-11 18:53:27"
+    },
+    {
+      "nom": "Fauteuil Gonflable Premium avec Repose-Pieds – Tra",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 299.0,
+      "prix_moyen": 580.58,
+      "variation_pct": -48.5,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 48.5%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "VIHALS",
+      "site": "ikea",
+      "categorie": "banc-tv-10810",
+      "prix_actuel": 1999.0,
+      "prix_moyen": 3774.38,
+      "variation_pct": -47.04,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 47.0%",
+      "date": "2026-06-11 18:52:27"
+    },
+    {
+      "nom": "Fauteuil Gonflable Ergonomique avec Repose-Pieds –",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 295.0,
+      "prix_moyen": 556.56,
+      "variation_pct": -47.0,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 47.0%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "Silencieux et doux – extraction discrète, sans gên",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 299.0,
+      "prix_moyen": 562.98,
+      "variation_pct": -46.89,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 46.9%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "Armoire de Rangement Penderie de Vêtement Pliable ",
+      "site": "jumia",
+      "categorie": "meubles-meubles-chambre-coucher",
+      "prix_actuel": 185.0,
+      "prix_moyen": 342.0,
+      "variation_pct": -45.91,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 45.9%",
+      "date": "2026-06-11 18:52:21"
+    },
+    {
+      "nom": "NORDVIKEN / NORDVIKEN",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-6-pers-36213",
+      "prix_actuel": 14195.0,
+      "prix_moyen": 9745.0,
+      "variation_pct": 45.66,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 45.7%",
+      "date": "2026-06-11 18:53:49"
+    },
+    {
+      "nom": "TONSTAD / TONSTAD",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-6-pers-36213",
+      "prix_actuel": 16195.0,
+      "prix_moyen": 11245.0,
+      "variation_pct": 44.02,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 44.0%",
+      "date": "2026-06-11 18:53:49"
+    },
+    {
+      "nom": "KRONÖREN",
+      "site": "ikea",
+      "categorie": "armoires-ouvertes-43634",
+      "prix_actuel": 999.0,
+      "prix_moyen": 699.0,
+      "variation_pct": 42.92,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 42.9%",
+      "date": "2026-06-11 18:52:09"
+    },
+    {
+      "nom": "Table de chevet multifonctionnelle, portable et pl",
+      "site": "jumia",
+      "categorie": "salle-a-manger",
+      "prix_actuel": 119.0,
+      "prix_moyen": 207.74,
+      "variation_pct": -42.72,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 42.7%",
+      "date": "2026-06-11 18:51:20"
+    },
+    {
+      "nom": "IDÅSEN",
+      "site": "ikea",
+      "categorie": "bureaux-professionnels-47069",
+      "prix_actuel": 4899.0,
+      "prix_moyen": 8199.0,
+      "variation_pct": -40.25,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 40.2%",
+      "date": "2026-06-11 18:52:35"
+    },
+    {
+      "nom": "Chaise Relax Gonflable Deluxe – Noir/Beige Élégant",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 585.0,
+      "prix_moyen": 976.63,
+      "variation_pct": -40.1,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 40.1%",
+      "date": "2026-06-11 18:52:34"
+    },
+    {
+      "nom": "SLATORP",
+      "site": "ikea",
+      "categorie": "canapes-avec-meridienne-en-tissu-47388",
+      "prix_actuel": 13999.0,
+      "prix_moyen": 9999.0,
+      "variation_pct": 40.0,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 40.0%",
+      "date": "2026-06-11 18:50:37"
+    },
+    {
+      "nom": "Table d’appoint roulante moderne pour ordinateur p",
+      "site": "jumia",
+      "categorie": "meubles-meubles-chambre-coucher",
+      "prix_actuel": 254.15,
+      "prix_moyen": 422.41,
+      "variation_pct": -39.83,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 39.8%",
+      "date": "2026-06-11 18:52:11"
+    },
+    {
+      "nom": "SKÅLSTA",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-4-pers-36212",
+      "prix_actuel": 5591.0,
+      "prix_moyen": 4012.6,
+      "variation_pct": 39.34,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 39.3%",
+      "date": "2026-06-11 18:53:46"
+    },
+    {
+      "nom": "VITTSJÖ",
+      "site": "ikea",
+      "categorie": "meuble-etagere-11465",
+      "prix_actuel": 1299.0,
+      "prix_moyen": 2132.0,
+      "variation_pct": -39.07,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 39.1%",
+      "date": "2026-06-11 18:53:32"
+    },
+    {
+      "nom": "Chaise Longue Gonflable Portable avec Pouf - Canap",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 249.99,
+      "prix_moyen": 406.81,
+      "variation_pct": -38.55,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 38.5%",
+      "date": "2026-06-11 18:53:27"
+    },
+    {
+      "nom": "Canapé d’Appoint Gonflable Épais – Design Moderne ",
+      "site": "jumia",
+      "categorie": "meubles-meubles-chambre-coucher",
+      "prix_actuel": 359.0,
+      "prix_moyen": 583.38,
+      "variation_pct": -38.46,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 38.5%",
+      "date": "2026-06-11 18:52:17"
+    },
+    {
+      "nom": "HYLTARP",
+      "site": "ikea",
+      "categorie": "canapes-dangle-en-tissu-10671",
+      "prix_actuel": 16499.0,
+      "prix_moyen": 11918.2,
+      "variation_pct": 38.44,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 38.4%",
+      "date": "2026-06-11 18:50:40"
+    },
+    {
+      "nom": "Canapé Gonflable en Forme S avec Pompe – Fauteuil ",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 732.24,
+      "prix_moyen": 529.02,
+      "variation_pct": 38.41,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 38.4%",
+      "date": "2026-06-11 18:53:20"
+    },
+    {
+      "nom": "GREJIG",
+      "site": "ikea",
+      "categorie": "etageres-et-armoires-a-chaussures-10456",
+      "prix_actuel": 3995.0,
+      "prix_moyen": 2896.5,
+      "variation_pct": 37.93,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 37.9%",
+      "date": "2026-06-11 18:53:40"
+    },
+    {
+      "nom": "SMEDSTORP",
+      "site": "ikea",
+      "categorie": "canapes-avec-meridienne-en-tissu-47388",
+      "prix_actuel": 15299.0,
+      "prix_moyen": 11099.0,
+      "variation_pct": 37.84,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 37.8%",
+      "date": "2026-06-11 18:50:37"
+    },
+    {
+      "nom": "Table Basse modern en bois mdf",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 494.1,
+      "prix_moyen": 778.79,
+      "variation_pct": -36.56,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 36.6%",
+      "date": "2026-06-11 18:53:15"
+    },
+    {
+      "nom": "Ensemble fauteuil + pouf gonflables Ultra Lounge",
+      "site": "jumia",
+      "categorie": "meubles-meubles-chambre-coucher",
+      "prix_actuel": 347.9,
+      "prix_moyen": 546.99,
+      "variation_pct": -36.4,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 36.4%",
+      "date": "2026-06-11 18:52:07"
+    },
+    {
+      "nom": "Mini commode pour bébé",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 300.0,
+      "prix_moyen": 220.0,
+      "variation_pct": 36.36,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 36.4%",
+      "date": "2026-06-11 18:53:21"
+    },
+    {
+      "nom": "SKRUVBY",
+      "site": "ikea",
+      "categorie": "banc-tv-10810",
+      "prix_actuel": 1699.0,
+      "prix_moyen": 2648.62,
+      "variation_pct": -35.85,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 35.9%",
+      "date": "2026-06-11 18:52:27"
+    },
+    {
+      "nom": "Étagère de Rangement d'angle Organisateur Coin Sal",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 220.0,
+      "prix_moyen": 340.74,
+      "variation_pct": -35.43,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 35.4%",
+      "date": "2026-06-11 18:53:15"
+    },
+    {
+      "nom": "Table de Lit Pliable en Bambou Laqué  Plateau Peti",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 145.0,
+      "prix_moyen": 222.0,
+      "variation_pct": -34.68,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 34.7%",
+      "date": "2026-06-11 18:52:33"
+    },
+    {
+      "nom": "Table d’appoint moderne à double niveau avec étagè",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 504.79,
+      "prix_moyen": 374.89,
+      "variation_pct": 34.65,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 34.6%",
+      "date": "2026-06-11 18:53:12"
+    },
+    {
+      "nom": "NÄSINGE / HÖGVED",
+      "site": "ikea",
+      "categorie": "ensembles-tables-et-chaises-max-4-pers-36212",
+      "prix_actuel": 9395.0,
+      "prix_moyen": 6995.0,
+      "variation_pct": 34.31,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 34.3%",
+      "date": "2026-06-11 18:53:46"
+    },
+    {
+      "nom": "Table d’appoint en forme de C moderne – Petite tab",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 179.0,
+      "prix_moyen": 271.41,
+      "variation_pct": -34.05,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 34.0%",
+      "date": "2026-06-11 18:53:25"
+    },
+    {
+      "nom": "MEHAMN",
+      "site": "ikea",
+      "categorie": "pax-portes-coulissantes-19115",
+      "prix_actuel": 4950.0,
+      "prix_moyen": 3700.0,
+      "variation_pct": 33.78,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.8%",
+      "date": "2026-06-11 18:51:54"
+    },
+    {
+      "nom": "LÅDMAKARE",
+      "site": "ikea",
+      "categorie": "meuble-etagere-11465",
+      "prix_actuel": 529.0,
+      "prix_moyen": 396.33,
+      "variation_pct": 33.47,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.5%",
+      "date": "2026-06-11 18:53:32"
+    },
+    {
+      "nom": "Table de salon",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 699.0,
+      "prix_moyen": 524.0,
+      "variation_pct": 33.4,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.4%",
+      "date": "2026-06-11 18:53:17"
+    },
+    {
+      "nom": "RODULF",
+      "site": "ikea",
+      "categorie": "bureaux-professionnels-47069",
+      "prix_actuel": 4000.0,
+      "prix_moyen": 2999.33,
+      "variation_pct": 33.36,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.4%",
+      "date": "2026-06-11 18:52:35"
+    },
+    {
+      "nom": "JÄTTESTA",
+      "site": "ikea",
+      "categorie": "meuble-etagere-11465",
+      "prix_actuel": 4998.0,
+      "prix_moyen": 3748.5,
+      "variation_pct": 33.33,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.3%",
+      "date": "2026-06-11 18:53:32"
+    },
+    {
+      "nom": "SPIKSMED",
+      "site": "ikea",
+      "categorie": "buffets-et-bahuts-10412",
+      "prix_actuel": 2998.0,
+      "prix_moyen": 2248.5,
+      "variation_pct": 33.33,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.3%",
+      "date": "2026-06-11 18:52:22"
+    },
+    {
+      "nom": "Chaise Pack 2pcs de Camping Plage Pliante Fauteuil",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 314.1,
+      "prix_moyen": 471.15,
+      "variation_pct": -33.33,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 33.3%",
+      "date": "2026-06-11 18:53:20"
+    },
+    {
+      "nom": "Fauteuil Gonflable Compact et Confortable, avec Co",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 574.89,
+      "prix_moyen": 431.94,
+      "variation_pct": 33.09,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.1%",
+      "date": "2026-06-11 18:52:31"
+    },
+    {
+      "nom": "LASTARE",
+      "site": "ikea",
+      "categorie": "armoires-de-couloir-48007",
+      "prix_actuel": 2880.0,
+      "prix_moyen": 2165.71,
+      "variation_pct": 32.98,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 33.0%",
+      "date": "2026-06-11 18:52:11"
+    },
+    {
+      "nom": "Oreiller de Grossesse Gonflable avec Trou pour Ven",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 607.97,
+      "prix_moyen": 458.99,
+      "variation_pct": 32.46,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 32.5%",
+      "date": "2026-06-11 18:52:28"
+    },
+    {
+      "nom": "IDANÄS",
+      "site": "ikea",
+      "categorie": "buffets-et-bahuts-10412",
+      "prix_actuel": 3999.0,
+      "prix_moyen": 5915.3,
+      "variation_pct": -32.4,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 32.4%",
+      "date": "2026-06-11 18:52:22"
+    },
+    {
+      "nom": "PAX",
+      "site": "ikea",
+      "categorie": "armoires-integrees-43632",
+      "prix_actuel": 7230.0,
+      "prix_moyen": 10630.42,
+      "variation_pct": -31.99,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 32.0%",
+      "date": "2026-06-11 18:52:02"
+    },
+    {
+      "nom": "JÄTTEBO",
+      "site": "ikea",
+      "categorie": "meridiennes-57527",
+      "prix_actuel": 11300.0,
+      "prix_moyen": 16517.0,
+      "variation_pct": -31.59,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 31.6%",
+      "date": "2026-06-11 18:50:50"
+    },
+    {
+      "nom": "Canapé Gonflable Portable avec Repose-Pieds, pour ",
+      "site": "jumia",
+      "categorie": "maison-bureau-meubles",
+      "prix_actuel": 285.0,
+      "prix_moyen": 412.7,
+      "variation_pct": -30.94,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 30.9%",
+      "date": "2026-06-11 18:52:59"
+    },
+    {
+      "nom": "Fauteuil Gonflable Confort – Noir & Beige",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 382.5,
+      "prix_moyen": 550.5,
+      "variation_pct": -30.52,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 30.5%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "RAMNEFJÄLL",
+      "site": "ikea",
+      "categorie": "lits-rembourres-49096",
+      "prix_actuel": 3995.0,
+      "prix_moyen": 3061.67,
+      "variation_pct": 30.48,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 30.5%",
+      "date": "2026-06-11 18:50:58"
+    },
+    {
+      "nom": "Chaise Longue Gonflable pour Salon, Camping et Piq",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 403.5,
+      "prix_moyen": 310.75,
+      "variation_pct": 29.85,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 29.8%",
+      "date": "2026-06-11 18:52:37"
+    },
+    {
+      "nom": "KALLAX",
+      "site": "ikea",
+      "categorie": "bibliotheques-10382",
+      "prix_actuel": 1899.0,
+      "prix_moyen": 1464.6,
+      "variation_pct": 29.66,
+      "type": "HAUSSE_FORTE",
+      "type_alerte": "HAUSSE_FORTE",
+      "priorite": "MOYENNE",
+      "message": "Hausse de 29.7%",
+      "date": "2026-06-11 18:53:35"
+    },
+    {
+      "nom": "2 Tables Multifonctionnels Pour Ordinateur PC Et R",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 458.58,
+      "prix_moyen": 647.81,
+      "variation_pct": -29.21,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 29.2%",
+      "date": "2026-06-11 18:52:28"
+    },
+    {
+      "nom": "PACK de 2 Tables Pliables 1 Noire et 1 Bleue pour ",
+      "site": "jumia",
+      "categorie": "salons",
+      "prix_actuel": 458.58,
+      "prix_moyen": 647.81,
+      "variation_pct": -29.21,
+      "type": "BAISSE_FORTE",
+      "type_alerte": "BAISSE_FORTE",
+      "priorite": "HAUTE",
+      "message": "Baisse de 29.2%",
+      "date": "2026-06-11 18:52:34"
+    }
+  ],
+  "seuils_alertes": {
+    "baisse_pct": -2.0,
+    "hausse_pct": 2.0
+  },
+  "segmentation": {
+    "par_gamme": [
+      {
+        "gamme_prix": "Entrée (<500)",
+        "site": "ikea",
+        "nb_produits": 23,
+        "prix_moy": 309.78,
+        "remise_moy": 0.0,
+        "taux_promo": 0.0
+      },
+      {
+        "gamme_prix": "Entrée (<500)",
+        "site": "jumia",
+        "nb_produits": 442,
+        "prix_moy": 303.81,
+        "remise_moy": 28.81,
+        "taux_promo": 84.0
+      },
+      {
+        "gamme_prix": "Entrée (<500)",
+        "site": "kitea",
+        "nb_produits": 66,
+        "prix_moy": 317.77,
+        "remise_moy": 18.97,
+        "taux_promo": 41.0
+      },
+      {
+        "gamme_prix": "Économique (500-1500)",
+        "site": "ikea",
+        "nb_produits": 57,
+        "prix_moy": 1066.04,
+        "remise_moy": 0.0,
+        "taux_promo": 0.0
+      },
+      {
+        "gamme_prix": "Économique (500-1500)",
+        "site": "jumia",
+        "nb_produits": 409,
+        "prix_moy": 952.44,
+        "remise_moy": 19.1,
+        "taux_promo": 66.0
+      },
+      {
+        "gamme_prix": "Économique (500-1500)",
+        "site": "kitea",
+        "nb_produits": 342,
+        "prix_moy": 1046.35,
+        "remise_moy": 15.07,
+        "taux_promo": 44.0
+      },
+      {
+        "gamme_prix": "Milieu (1500-4000)",
+        "site": "ikea",
+        "nb_produits": 105,
+        "prix_moy": 2651.68,
+        "remise_moy": 0.0,
+        "taux_promo": 0.0
+      },
+      {
+        "gamme_prix": "Milieu (1500-4000)",
+        "site": "jumia",
+        "nb_produits": 389,
+        "prix_moy": 2468.69,
+        "remise_moy": 17.26,
+        "taux_promo": 60.0
+      },
+      {
+        "gamme_prix": "Milieu (1500-4000)",
+        "site": "kitea",
+        "nb_produits": 578,
+        "prix_moy": 2618.7,
+        "remise_moy": 13.39,
+        "taux_promo": 46.0
+      },
+      {
+        "gamme_prix": "Premium (4000-10k)",
+        "site": "ikea",
+        "nb_produits": 83,
+        "prix_moy": 6327.04,
+        "remise_moy": 0.0,
+        "taux_promo": 0.0
+      },
+      {
+        "gamme_prix": "Premium (4000-10k)",
+        "site": "jumia",
+        "nb_produits": 54,
+        "prix_moy": 4873.17,
+        "remise_moy": 10.63,
+        "taux_promo": 46.0
+      },
+      {
+        "gamme_prix": "Premium (4000-10k)",
+        "site": "kitea",
+        "nb_produits": 238,
+        "prix_moy": 6154.18,
+        "remise_moy": 10.19,
+        "taux_promo": 40.0
+      },
+      {
+        "gamme_prix": "Luxe (>10k)",
+        "site": "ikea",
+        "nb_produits": 27,
+        "prix_moy": 14070.48,
+        "remise_moy": 0.0,
+        "taux_promo": 0.0
+      },
+      {
+        "gamme_prix": "Luxe (>10k)",
+        "site": "jumia",
+        "nb_produits": 0,
+        "prix_moy": NaN,
+        "remise_moy": NaN,
+        "taux_promo": NaN
+      },
+      {
+        "gamme_prix": "Luxe (>10k)",
+        "site": "kitea",
+        "nb_produits": 73,
+        "prix_moy": 14443.01,
+        "remise_moy": 11.61,
+        "taux_promo": 32.0
+      }
+    ],
+    "distribution_site": {
+      "Entrée (<500)": {
+        "ikea": 23,
+        "jumia": 442,
+        "kitea": 66
+      },
+      "Économique (500-1500)": {
+        "ikea": 57,
+        "jumia": 409,
+        "kitea": 342
+      },
+      "Milieu (1500-4000)": {
+        "ikea": 105,
+        "jumia": 389,
+        "kitea": 578
+      },
+      "Premium (4000-10k)": {
+        "ikea": 83,
+        "jumia": 54,
+        "kitea": 238
+      },
+      "Luxe (>10k)": {
+        "ikea": 27,
+        "jumia": 0,
+        "kitea": 73
+      }
+    }
+  },
+  "machine_learning": {
+    "version": "v2-no-leakage",
+    "modeles": {
+      "random_forest": {
+        "mae": 1124.990650869493,
+        "rmse": 2188.0303429977253,
+        "r2": 0.4929603732546648,
+        "n_estimators": 200,
+        "features": [
+          "site_enc",
+          "cat_enc",
+          "remise_pct",
+          "en_promo",
+          "ancien_prix",
+          "ancien_prix_log",
+          "jour_semaine"
+        ]
+      },
+      "linear_regression": {
+        "mae": 1433.2368864648333,
+        "r2": 0.33415679343481475
+      }
+    },
+    "meilleur_modele": "random_forest",
+    "feature_importance": {
+      "ancien_prix_log": 0.3499,
+      "ancien_prix": 0.3223,
+      "cat_enc": 0.142,
+      "site_enc": 0.1046,
+      "remise_pct": 0.0807,
+      "en_promo": 0.0005,
+      "jour_semaine": 0.0
+    },
+    "sites_valides": [
+      "ikea",
+      "jumia",
+      "kitea"
+    ],
+    "categories_valides": [
+      "Chambre Adulte",
+      "Mobilier Pro",
+      "Rangement",
+      "Salle A Manger",
+      "Salon Et Sejour"
+    ]
+  }
+}

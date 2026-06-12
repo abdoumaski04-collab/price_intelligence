@@ -1,0 +1,35 @@
+# ── Credentials GCP (NE JAMAIS COMMIT) ──────────────────────
+diesel-patrol-*.json
+*service_account*.json
+*credentials*.json
+
+# ── Jupyter ──────────────────────────────────────────────────
+**/.ipynb_checkpoints/
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Python cache ─────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Environnements virtuels ───────────────────────────────────
+venv/
+env/
+.env
+*.egg-info/
+
+# ── Tests / Coverage ─────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── OS ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log

@@ -1,0 +1,265 @@
+<div class="page-wrapper">
+
+  <!-- Top Navigation -->
+  <nav class="topnav">
+    <div class="brand">
+      <div class="brand-icon"></div>
+      <span class="brand-name">Mobilier<span>Prix</span></span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-stores">
+        <span class="store-tag jumia">Jumia</span>
+        <span class="store-tag ikea">IKEA</span>
+        <span class="store-tag kitea">Kitea</span>
+      </div>
+      <button class="analytics-nav-btn" (click)="goToAnalytics()">
+        Analytics
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <p class="hero-eyebrow">Comparez les meilleurs prix au Maroc</p>
+    <h1>Trouvez le <strong>meilleur prix</strong> pour chaque meuble</h1>
+    <p class="hero-sub">
+      Consultez et comparez les offres de Jumia, IKEA et Kitea en un seul endroit.
+      Les meilleurs prix, toujours en premier.
+    </p>
+    <div class="search-wrap">
+      <input
+        id="search-input"
+        type="text"
+        class="search-input"
+        [(ngModel)]="searchQuery"
+        (keyup.enter)="onSearch()"
+        placeholder="Rechercher un meuble, une marque..."
+      />
+      <button id="search-btn" class="search-btn" (click)="onSearch()">Rechercher</button>
+    </div>
+    <div class="hero-analytics-cta">
+      <span class="cta-divider-line"></span>
+      <span class="cta-divider-text">ou</span>
+      <span class="cta-divider-line"></span>
+    </div>
+    <button class="analytics-hero-btn" (click)="goToAnalytics()">
+      <span>Explorer le Tableau de Bord Analytique</span>
+      <span class="hero-btn-arrow">→</span>
+    </button>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Categories -->
+    <p class="section-title">Parcourir par categorie</p>
+    <div class="category-grid">
+      @for (cat of categories; track cat.name) {
+        <div
+          class="category-card"
+          [class.active]="selectedCategory() === cat.name"
+          (click)="onCategoryClick(cat.name)"
+        >
+          <img [src]="cat.image" [alt]="cat.name" />
+          <div class="category-overlay">
+            <span class="category-label">{{ cat.name }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Loading State -->
+    @if (isLoading()) {
+      <div class="loading-wrap">
+        <div class="spinner"></div>
+        <p>Recherche des meilleures offres...</p>
+      </div>
+    }
+
+    <!-- Results Section -->
+    @if (!isLoading() && hasSearched()) {
+
+      <!-- Filters Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="toolbar-label">Source :</span>
+          @for (src of sources; track src) {
+            <button
+              class="pill"
+              [class.active]="selectedSource() === src"
+              (click)="onSourceClick(src)"
+            >{{ src }}</button>
+          }
+
+          <div class="vertical-divider"></div>
+
+          <!-- Price Range Filter -->
+          <div class="price-filter-wrap">
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                [checked]="priceFilterEnabled()"
+                (change)="onPriceFilterToggle()"
+              />
+              <span>Filtrer par prix</span>
+            </label>
+
+            <div class="price-inputs" [class.disabled]="!priceFilterEnabled()">
+              <input
+                type="number"
+                class="price-input-field"
+                placeholder="Min"
+                [ngModel]="minPriceFilter()"
+                (ngModelChange)="minPriceFilter.set($event)"
+                (keyup.enter)="onPriceBoundsChange()"
+                [disabled]="!priceFilterEnabled()"
+              />
+              <span class="price-input-dash">&mdash;</span>
+              <input
+                type="number"
+                class="price-input-field"
+                placeholder="Max"
+                [ngModel]="maxPriceFilter()"
+                (ngModelChange)="maxPriceFilter.set($event)"
+                (keyup.enter)="onPriceBoundsChange()"
+                [disabled]="!priceFilterEnabled()"
+              />
+              <span class="price-unit">MAD</span>
+              <button
+                class="price-apply-btn"
+                (click)="onPriceBoundsChange()"
+                [disabled]="!priceFilterEnabled()"
+              >Appliquer</button>
+            </div>
+          </div>
+        </div>
+        <button class="sort-btn" (click)="toggleSort()">
+          <span class="sort-icon">{{ sortDir() === 'asc' ? '↑' : '↓' }}</span>
+          Prix {{ sortDir() === 'asc' ? 'croissant' : 'decroissant' }}
+        </button>
+      </div>
+
+      <!-- Results Header -->
+      <div class="results-header">
+        <div>
+          <h2 class="results-title">
+            @if (selectedCategory()) {
+              {{ selectedCategory() }}
+            } @else {
+              Resultats pour "{{ searchQuery() }}"
+            }
+          </h2>
+          <p class="results-subtitle">
+            @if (selectedSource()) { Filtre : {{ selectedSource() }} &mdash; }
+            Prix {{ sortDir() === 'asc' ? 'du moins cher au plus cher' : 'du plus cher au moins cher' }}
+          </p>
+        </div>
+        <span class="result-count">{{ totalResults() }} produits</span>
+      </div>
+
+      @if (products().length === 0) {
+        <div class="empty-state">
+          <h3>Aucun produit trouve</h3>
+          <p>Essayez un autre mot-cle ou une autre categorie.</p>
+        </div>
+      } @else {
+        <div class="product-grid">
+          @for (product of products(); track product.url) {
+            <div class="product-card" [class.best-deal]="isBestDeal(product)">
+
+              @if (isBestDeal(product)) {
+                <div class="best-deal-badge">Meilleure affaire</div>
+              }
+
+              <div class="card-meta">
+                <span class="card-brand">{{ product.marque || 'Autre' }}</span>
+                <span class="card-source" [style.background]="getSiteColor(product.url)">
+                  {{ getSiteName(product.url) }}
+                </span>
+              </div>
+
+              <p class="card-name">{{ product.nom }}</p>
+
+              <div class="pricing">
+                @if (product.prix !== null && product.prix !== undefined) {
+                  <span class="price-current">
+                    {{ product.prix | number:'1.0-0' }}<span class="price-currency"> MAD</span>
+                  </span>
+                } @else {
+                  <span class="price-current">N/A</span>
+                }
+                @if (product.ancien_prix) {
+                  <span class="price-old">{{ product.ancien_prix | number:'1.0-0' }} MAD</span>
+                }
+                @if (product.remise) {
+                  <span class="price-discount">-{{ product.remise }}%</span>
+                }
+              </div>
+
+              <div class="card-footer">
+                <div class="card-source-label">{{ getSiteName(product.url) }}</div>
+                @if (product.url) {
+                  <a [href]="product.url" target="_blank" class="card-cta">
+                    Voir l'offre
+                  </a>
+                }
+              </div>
+
+            </div>
+          }
+        </div>
+
+        <!-- Pagination Controls -->
+        @if (totalPages() > 1) {
+          <div class="pagination-wrap">
+            <button
+              class="pagination-btn"
+              [disabled]="currentPage() === 1"
+              (click)="prevPage()"
+              aria-label="Page précédente"
+            >
+              &laquo; Précédent
+            </button>
+
+            @for (p of visiblePages(); track p) {
+              @if (p === '...') {
+                <span class="pagination-ellipsis">&hellip;</span>
+              } @else {
+                <button
+                  class="pagination-btn"
+                  [class.active]="currentPage() === p"
+                  (click)="goToPage(p)"
+                >
+                  {{ p }}
+                </button>
+              }
+            }
+
+            <button
+              class="pagination-btn"
+              [disabled]="currentPage() === totalPages()"
+              (click)="nextPage()"
+              aria-label="Page suivante"
+            >
+              Suivant &raquo;
+            </button>
+          </div>
+        }
+      }
+    }
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-copy">MobilierPrix &mdash; Comparateur de prix mobilier au Maroc</p>
+    <div class="footer-stores">
+      <a href="https://www.jumia.ma" target="_blank" class="footer-link">Jumia</a>
+      <a href="https://www.ikea.com/ma" target="_blank" class="footer-link">IKEA</a>
+      <a href="https://www.kitea.com" target="_blank" class="footer-link">Kitea</a>
+    </div>
+  </footer>
+
+</div>

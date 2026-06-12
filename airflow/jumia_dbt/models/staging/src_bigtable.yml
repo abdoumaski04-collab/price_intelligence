@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: price_intelligence_bigtable
+    database: diesel-patrol-491520-j8
+    schema: price_intelligence_bigtable
+    tables:
+      - name: produits_external

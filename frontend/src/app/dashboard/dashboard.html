@@ -1,0 +1,157 @@
+<div class="dashboard-page">
+
+  <!-- Navigation -->
+  <nav class="dash-nav">
+    <div class="dash-nav-left">
+      <div class="dash-logo">
+        <div class="dash-logo-icon"></div>
+        <span class="dash-logo-text">MobilierPrix<span>Analytics</span></span>
+      </div>
+    </div>
+    <div class="dash-nav-center">
+      <span class="dash-nav-badge">Tableau de Bord</span>
+    </div>
+    <div class="dash-nav-right">
+      <span class="dash-user">
+        <span class="dash-user-dot"></span>
+        {{ userName() }}
+      </span>
+      <button class="dash-home-btn" (click)="goHome()">Comparateur</button>
+      <button class="dash-logout-btn" (click)="logout()">Déconnexion</button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="dash-main">
+
+    <!-- Page Header -->
+    <header class="dash-header">
+      <div class="dash-header-text">
+        <h1>Intelligence Prix — <span>Analyse Avancée</span></h1>
+        <p>Visualisations interactives et indicateurs clés — Jumia, IKEA &amp; Kitea, Maroc</p>
+      </div>
+      <div class="dash-header-meta">
+        @if (stats()?.meta) {
+          <span class="meta-pill">{{ stats().meta.nb_produits }} produits</span>
+          <span class="meta-pill">{{ stats().meta.periode_historique }}</span>
+          <span class="meta-pill mode">{{ stats().meta.mode_donnees }}</span>
+        }
+      </div>
+    </header>
+
+    <!-- KPI Cards -->
+    @if (stats()) {
+      <section class="kpi-section">
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-total">
+            <div class="kpi-glow"></div>
+            <div class="kpi-top">
+              <span class="kpi-label">Produits Analyses</span>
+            </div>
+            <span class="kpi-value">{{ stats().meta?.nb_produits | number }}</span>
+          </div>
+          <div class="kpi-card kpi-cat">
+            <div class="kpi-glow"></div>
+            <div class="kpi-top">
+              <span class="kpi-label">Categories</span>
+            </div>
+            <span class="kpi-value">{{ stats().meta?.nb_categories }}</span>
+          </div>
+          <div class="kpi-card kpi-jumia">
+            <div class="kpi-glow"></div>
+            <div class="kpi-top">
+              <span class="kpi-label">Moy. Jumia</span>
+            </div>
+            <span class="kpi-value">{{ stats().stats_par_site?.moyenne?.jumia | number:'1.0-0' }} <small>MAD</small></span>
+          </div>
+          <div class="kpi-card kpi-ikea">
+            <div class="kpi-glow"></div>
+            <div class="kpi-top">
+              <span class="kpi-label">Moy. IKEA</span>
+            </div>
+            <span class="kpi-value">{{ stats().stats_par_site?.moyenne?.ikea | number:'1.0-0' }} <small>MAD</small></span>
+          </div>
+          <div class="kpi-card kpi-kitea">
+            <div class="kpi-glow"></div>
+            <div class="kpi-top">
+              <span class="kpi-label">Moy. Kitea</span>
+            </div>
+            <span class="kpi-value">{{ stats().stats_par_site?.moyenne?.kitea | number:'1.0-0' }} <small>MAD</small></span>
+          </div>
+        </div>
+      </section>
+    }
+
+    <!-- Promotions KPIs -->
+    @if (promotions()) {
+      <section class="promo-section">
+        <h2 class="section-label">Promotions</h2>
+        <div class="promo-grid">
+          <div class="promo-card">
+            <span class="promo-site jumia-accent">Jumia</span>
+            <span class="promo-stat">{{ promotions().taux_promo?.jumia }}%</span>
+            <span class="promo-desc">taux de promo · remise moy. {{ promotions().remise_moy?.jumia }}%</span>
+          </div>
+          <div class="promo-card">
+            <span class="promo-site kitea-accent">Kitea</span>
+            <span class="promo-stat">{{ promotions().taux_promo?.kitea }}%</span>
+            <span class="promo-desc">taux de promo · remise moy. {{ promotions().remise_moy?.kitea }}%</span>
+          </div>
+          <div class="promo-card">
+            <span class="promo-site ikea-accent">IKEA</span>
+            <span class="promo-stat">{{ promotions().taux_promo?.ikea }}%</span>
+            <span class="promo-desc">taux de promo · remise moy. {{ promotions().remise_moy?.ikea }}%</span>
+          </div>
+        </div>
+      </section>
+    }
+
+    <!-- Loading Indicator -->
+    @if (isLoading()) {
+      <div class="dash-loading">
+        <div class="dash-spinner"></div>
+        <p>Chargement des visualisations...</p>
+      </div>
+    }
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="section-header">
+        <h2 class="section-label">Visualisations</h2>
+        <span class="section-counter">{{ chartsLoaded().size }} / {{ charts.length }} graphiques</span>
+      </div>
+
+      <div class="charts-grid">
+        @for (chart of charts; track chart.id) {
+          <div
+            class="chart-card"
+            [class.loaded]="chartsLoaded().has(chart.id)"
+            [class.chart-wide]="chart.span === 'wide'"
+          >
+            <div class="chart-card-header">
+              <div class="chart-card-titles">
+                <h3>{{ chart.title }}</h3>
+                <p>{{ chart.description }}</p>
+              </div>
+            </div>
+            <div [id]="'chart-' + chart.id" class="chart-container">
+              @if (!chartsLoaded().has(chart.id)) {
+                <div class="chart-placeholder">
+                  <div class="chart-placeholder-bar"></div>
+                  <div class="chart-placeholder-bar short"></div>
+                  <div class="chart-placeholder-bar medium"></div>
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="dash-footer">
+    <p>MobilierPrix Analytics — Données mises à jour en continu</p>
+  </footer>
+</div>

@@ -1,0 +1,11 @@
+jumia_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: diesel-patrol-491520-j8
+      dataset: price_intelligence_bigtable
+      threads: 1
+      keyfile: /opt/airflow/gcp-key.json
+      location: us-east1

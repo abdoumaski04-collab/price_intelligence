@@ -1,0 +1,104 @@
+version: 2
+
+models:
+
+  # ── STAGING ────────────────────────────────────────────────────────────────
+
+  - name: stg_produits
+    description: "Données brutes nettoyées depuis NiFi/Kafka — toutes sources"
+    columns:
+      - name: source
+        description: "Site d'origine : jumia / ikea / kitea"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['jumia', 'ikea', 'kitea']
+      - name: prix
+        description: "Prix en MAD"
+        tests:
+          - not_null
+      - name: nom
+        description: "Nom du produit"
+        tests:
+          - not_null
+      - name: url
+        tests:
+          - not_null
+      - name: date_scraping
+        tests:
+          - not_null
+      - name: categorie
+        tests:
+          - not_null
+
+  # ── CLEANED ────────────────────────────────────────────────────────────────
+
+  - name: cleaned_produits
+    description: "Données enrichies avec colonnes calculées"
+    columns:
+      - name: source
+        description: "Site d'origine : jumia / ikea / kitea"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['jumia', 'ikea', 'kitea']
+      - name: prix
+        tests:
+          - not_null
+      - name: niveau_remise
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['sans remise', 'remise faible (<10%)', 'remise modérée (10–24%)', 'remise forte (25–49%)', 'remise exceptionnelle (≥50%)']
+      - name: tranche_prix
+        tests:
+          - not_null
+      - name: categorie_normalisee
+        tests:
+          - not_null
+
+  # ── AGGREGATIONS ───────────────────────────────────────────────────────────
+
+  - name: agg_prix_categorie
+    description: "Statistiques journalières par catégorie et source"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: prix_moyen
+        tests:
+          - not_null
+      - name: nb_produits
+        tests:
+          - not_null
+      - name: date_aggregation
+        tests:
+          - not_null
+
+  - name: weekly_stats
+    description: "Statistiques hebdomadaires par source"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: semaine
+        tests:
+          - not_null
+      - name: total_produits
+        tests:
+          - not_null
+
+  - name: price_velocity
+    description: "Variation de prix par produit dans le temps"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: tendance
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Hausse', 'Baisse', 'Stable']
+      - name: url
+        tests:
+          - not_null

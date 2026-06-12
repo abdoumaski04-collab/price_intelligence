@@ -1,0 +1,67 @@
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    restart: always
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    restart: always
+
+  nifi:
+    image: apache/nifi:1.23.2
+    container_name: nifi
+    depends_on:
+      - kafka
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      NIFI_WEB_HTTP_PORT: 8080
+      SINGLE_USER_CREDENTIALS_USERNAME: datagroup26
+      SINGLE_USER_CREDENTIALS_PASSWORD: nifidatagroup26
+    restart: always
+
+  airflow:
+    image: apache/airflow:2.7.3
+    container_name: airflow
+    ports:
+      - "8081:8080"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW_USERNAME: datagroup26
+      AIRFLOW_PASSWORD: airflowdatagroup26
+      AIRFLOW_EMAIL: group@datagroup.ma
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - airflow_db:/opt/airflow/db
+      - ./diesel-patrol-491520-j8-16dd83a23f21.json:/opt/airflow/gcp-key.json:ro
+    command: bash -c "airflow db init && airflow users create --username datagroup26 --password airflowdatagroup26 --firstname Admin --lastname Admin --role Admin --email group@datagroup.ma || true && airflow webserver & airflow scheduler"
+    restart: always
+
+  bigtable-emulator:
+    image: google/cloud-sdk:latest
+    container_name: bigtable-emulator
+    command: gcloud beta emulators bigtable start --host-port=0.0.0.0:8086
+    ports:
+      - "8086:8086"
+    restart: always
+
+volumes:
+  airflow_db:

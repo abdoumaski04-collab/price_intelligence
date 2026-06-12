@@ -1,0 +1,15 @@
+*.pyc
+__pycache__/
+*.log
+*.db
+*.pid
+airflow.cfg
+webserver_config.py
+logs/
+.git/
+gcp-key.json
+diesel-patrol-491520-j8-*.json
+*.json.gz
+*.xml.gz
+node_modules/
+.env

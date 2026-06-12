@@ -1,0 +1,135 @@
+<div class="login-page">
+  <!-- Animated Background Orbs -->
+  <div class="login-bg">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <div class="login-container">
+    <button class="back-btn" (click)="goHome()">
+      <span class="back-arrow">←</span> Retour à l'accueil
+    </button>
+
+    <div class="login-card">
+      <!-- Header -->
+      <div class="login-header">
+        <div class="login-icon-wrap">
+          <div class="login-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
+              <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
+              <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
+            </svg>
+          </div>
+        </div>
+        <h1>Accès Data Analytics</h1>
+        <p class="login-desc">Connectez-vous pour accéder au tableau de bord d'analyse des prix et aux visualisations avancées.</p>
+      </div>
+
+      <!-- Form -->
+      <form (ngSubmit)="onSubmit()" class="login-form">
+        <div class="form-group">
+          <label for="login-email">Adresse email professionnelle</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </span>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              [ngModel]="email()"
+              (ngModelChange)="email.set($event)"
+              placeholder="votre.nom&#64;entreprise.com"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Mot de passe</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input
+              id="login-password"
+              name="password"
+              [type]="showPassword() ? 'text' : 'password'"
+              [ngModel]="password()"
+              (ngModelChange)="password.set($event)"
+              placeholder="••••••••"
+              autocomplete="current-password"
+            />
+            <button type="button" class="toggle-pw" (click)="togglePasswordVisibility()" tabindex="-1">
+              {{ showPassword() ? 'Masquer' : 'Afficher' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-code">Code de confirmation</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+            </span>
+            <input
+              id="login-code"
+              name="confirmCode"
+              type="text"
+              [ngModel]="confirmCode()"
+              (ngModelChange)="confirmCode.set($event)"
+              placeholder="XXXX-XXXX"
+              autocomplete="one-time-code"
+            />
+          </div>
+          <span class="field-hint">Le code vous a été envoyé par l'administrateur</span>
+        </div>
+
+        <div class="form-group">
+          <label for="login-purpose">Motif d'accès aux données</label>
+          <textarea
+            id="login-purpose"
+            name="purpose"
+            [ngModel]="purpose()"
+            (ngModelChange)="purpose.set($event)"
+            placeholder="Décrivez pourquoi vous souhaitez accéder aux visualisations et analyses de données (min. 20 caractères)..."
+            rows="3"
+          ></textarea>
+          <span class="field-hint">{{ purpose().length }} / 20 caractères minimum</span>
+        </div>
+
+        <!-- Error Message -->
+        @if (errorMessage()) {
+          <div class="error-banner">
+            <span class="error-icon">!</span>
+            <span>{{ errorMessage() }}</span>
+          </div>
+        }
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn" [disabled]="isSubmitting()">
+          @if (isSubmitting()) {
+            <span class="btn-spinner"></span>
+            <span>Vérification en cours...</span>
+          } @else {
+            <span>Accéder au Tableau de Bord</span>
+            <span class="btn-arrow">→</span>
+          }
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p>Acces reserve aux analystes et decideurs autorises.<br/>Vos donnees sont chiffrees et securisees.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+name: 'jumia_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'jumia_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  jumia_dbt:
+    +materialized: view

@@ -1,14 +1,41 @@
-# Python
+# ==========================================
+# 🐍 Python & Environnements Virtuels
+# ==========================================
 __pycache__/
-*.pyc
-
-# Data
-*.csv
-*.json
-
-# Secrets
-credentials.json
-
-# Env
-.env
+*.py[cod]
+*$py.class
 venv/
+.venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# 🔑 Sécurité & Secrets
+# ==========================================
+.env
+.env.local
+.env.*.local
+!.env.example
+*.key
+*.pem
+
+# Clés GCP — bloquer précisément
+diesel-patrol-491520-j8-16dd83a23f21.json
+**/gcp-key.json
+**/.ipynb_checkpoints/
+
+# ==========================================
+# 📦 Frontend Angular (Dossiers générés)
+# ==========================================
+/frontend/node_modules/
+/frontend/.angular/
+/frontend/dist/
+/frontend/tmp/
+
+# ==========================================
+# 🐋 Docker & Bases locales
+# ==========================================
+.dockerignore
+/dataengineer/nifi-data/

@@ -1,0 +1,22 @@
+
+    
+    
+
+with all_values as (
+
+    select
+        type_remise as value_field,
+        count(*) as n_records
+
+    from `diesel-patrol-491520-j8`.`jumia_price_intelligence`.`cleaned_produits`
+    group by type_remise
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Forte remise','Remise moyenne','Petite remise','Sans remise'
+)
+
+

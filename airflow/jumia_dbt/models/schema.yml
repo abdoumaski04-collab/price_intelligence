@@ -1,0 +1,83 @@
+version: 2
+
+models:
+
+  - name: stg_produits
+    description: "Données brutes nettoyées depuis NiFi/Kafka"
+    columns:
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['jumia', 'ikea', 'kitea']
+      - name: prix
+        tests:
+          - not_null
+      - name: nom
+        tests:
+          - not_null
+      - name: url
+        tests:
+          - not_null
+      - name: date_scraping
+        tests:
+          - not_null
+      - name: categorie
+        tests:
+          - not_null
+
+  - name: cleaned_produits
+    description: "Données enrichies"
+    columns:
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['jumia', 'ikea', 'kitea']
+      - name: prix
+        tests:
+          - not_null
+      - name: nom
+        tests:
+          - not_null
+      - name: url
+        tests:
+          - not_null
+
+  - name: agg_prix_categorie
+    description: "Agrégations par catégorie"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: prix_moyen
+        tests:
+          - not_null
+
+  - name: weekly_stats
+    description: "Statistiques hebdomadaires"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: semaine
+        tests:
+          - not_null
+      - name: total_produits
+        tests:
+          - not_null
+
+  - name: price_velocity
+    description: "Variation de prix"
+    columns:
+      - name: source
+        tests:
+          - not_null
+      - name: tendance
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Hausse', 'Baisse', 'Stable']
+      - name: url
+        tests:
+          - not_null

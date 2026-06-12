@@ -1,0 +1,46 @@
+{
+  "version": "v2-no-leakage",
+  "modeles": {
+    "random_forest": {
+      "mae": 1124.990650869493,
+      "rmse": 2188.0303429977253,
+      "r2": 0.4929603732546648,
+      "n_estimators": 200,
+      "features": [
+        "site_enc",
+        "cat_enc",
+        "remise_pct",
+        "en_promo",
+        "ancien_prix",
+        "ancien_prix_log",
+        "jour_semaine"
+      ]
+    },
+    "linear_regression": {
+      "mae": 1433.2368864648333,
+      "r2": 0.33415679343481475
+    }
+  },
+  "meilleur_modele": "random_forest",
+  "feature_importance": {
+    "ancien_prix_log": 0.3499,
+    "ancien_prix": 0.3223,
+    "cat_enc": 0.142,
+    "site_enc": 0.1046,
+    "remise_pct": 0.0807,
+    "en_promo": 0.0005,
+    "jour_semaine": 0.0
+  },
+  "sites_valides": [
+    "ikea",
+    "jumia",
+    "kitea"
+  ],
+  "categories_valides": [
+    "Chambre Adulte",
+    "Mobilier Pro",
+    "Rangement",
+    "Salle A Manger",
+    "Salon Et Sejour"
+  ]
+}
